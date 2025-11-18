@@ -1,0 +1,204 @@
+/* File Written by: Ashley Masters
+Last Updated: 6th Nov 2025 */
+
+:root {
+    --color-1: #7c8fa3;
+    --color-2: #4682b4;
+    --color-3: #6cccc4;
+    --alt-color-1: #008000;
+    --alt-color-2: #800080;
+    --alt-color-3: #c709c7;
+    --alt-color-4: #ceb527;
+    --alt-color-5: #FF3030;
+    --primary-color: #7c8fa3;
+    --secondary-color: #4682b4;
+    /* --link-color: ; */
+}
+
+/* Page Wide Rules */
+body {
+    background-color: var(--primary-color);
+}
+h1, h2 {
+    font-family: "Oswald", "Times New Roman", sans-serif;
+}
+p{
+    font-family: "noto sans", "Times New Roman", sans-serif;
+}
+h2 {
+    width: 100%;
+}
+h1 {
+    font-size: 32px;
+}
+.section-header {
+    text-align: center;
+}
+a {
+    text-decoration: none;
+    /* color: var(--secondary-color); */
+}
+a:hover {
+    text-decoration: underline;
+}
+
+/* Rules related to menu at header and footer */
+nav button {
+    font-family: "Roboto slab", "Times New Roman", sans-serif;
+    background-color: var(--tertiary-color);
+    font-size: 20px;
+    border-radius: 4px;
+}
+.menu-list {
+    list-style: none;
+    display: flex;
+    padding-inline-start: 0px;
+}
+.menu-list li {
+    margin: 7.5px;
+}
+.menu {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+.menu-item {
+    align-self: center;
+    display: flex;
+    padding: 10px 0px;
+    height: 100%;
+    margin: 10px 0px;
+}
+.sub-menu-item {
+    margin: 0px 5px;
+}
+#header-div, #footer-div{
+    display: flex;
+    background-color: var(--tertiary-color);
+    flex-direction: column;
+}
+
+/* Rules Related to The Introduction */
+#introduction {
+    background-color: var(--secondary-color);
+    display: flex;
+    flex-direction: column;
+}
+#hero-img {
+    max-width: 100%;
+}
+#intro-text {
+    display: flex;
+    flex-direction: column;
+}
+#mission-vision {
+    font-weight: bold;
+    text-align: center;
+}
+#linkedINLink {
+    transition: 0.5s linear;
+
+}
+#linkedINLink:hover {
+    transform: matrix(.95, 0.1, 0.1, 1.2, 0, -10);
+    font-size: 32px;
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+    background-color: var(--primary-color);
+}
+
+/* Rules related to the Skills Section */
+#skill-list {
+    list-style: square;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+/* Rules related to the Contact Section */
+#contact {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.contact-button {
+    background-color: var(--primary-color);
+    font-family: "Roboto slab", "Times New Roman", sans-serif;
+    font-size: 20px;
+    border-radius: 4px;
+    margin: 0px 5px;
+}
+
+/* Rules related to the Project Section */
+.project {
+    width: 100%;
+    background-color: var(--secondary-color);
+}
+#project-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding-bottom: 20px;
+}
+
+/* Tablet Mode */
+@media (min-width: 768px) and (max-width: 1023.9999999px) {
+    :root {
+        --primary-color: var(--alt-color-1);
+        /* --secondary-color: var(--color-2); */
+        --tertiary-color: var(--alt-color-3)
+    }
+    #introduction {
+        flex-direction: row;
+    }
+    #hero-img {
+        max-width: 60%;
+    }
+    nav button, #header-div, #footer-div {
+        flex-direction: row;
+    }
+    .loose-text {
+        color: var(--alt-color-5);
+    }
+    #intro-line {
+        display: none;
+    }
+    #project-grid, #skill-list {
+        grid-template-columns: 1fr 1fr;
+    }
+    #skill-list {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    #linkedINLink:hover {
+        transform: matrix(1.2, 0.1, 0.1, 1.2, -80, -10);
+        margin-block-start: 0em;
+        margin-block-end: 0em;
+    }
+}
+
+/* Desktop Mode */
+@media (min-width: 1024px) {
+    :root {
+        --primary-color: var(--color-2);
+        --secondary-color: var(--color-3);
+        --tertiary-color: var(--alt-color-2)
+    }
+    #introduction {
+        flex-direction: row;
+    }
+    #hero-img {
+        max-width: 50%;
+    }
+    nav button, #header-div, #footer-div {
+        color: var(--alt-color-4) ;
+        flex-direction: row;
+    }
+    #project-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    #skill-list {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    #linkedINLink:hover {
+        transform: matrix(1.2, 0.1, 0.1, 1.2, -80, -10);
+    }
+}

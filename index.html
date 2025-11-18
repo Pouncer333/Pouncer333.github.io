@@ -1,0 +1,120 @@
+<!-- File Written by: Ashley Masters
+ Last Updated: 6th Nov 2025
+ 
+ To do:
+ Add temporary highlight to screen when a inter page link clicked to show where selected content is??
+ Maybe look into logo? not great at design??
+
+ Work out page colours considering links
+ Add picture to hero section
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ashley's Portfolio</title>
+    <!-- Importing fonts from google-->
+    <link href="styles.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="menu" id="header-div">
+            <div class="menu-item">
+                <img class="sub-menu-item" src="https://placehold.co/47x47" alt="Logo image">
+                <h1 class="sub-menu-item">Ashley's Portfolio</h1>
+            </div>
+            <nav class="menu-item">
+                <ul class="sub-menu-item menu-list">
+                    <li><button type="button" onclick="window.location.href='#hero'">Introduction</button></li>
+                    <li><button type="button" onclick="window.location.href='#skills'">Skills</button></li>
+                    <li><button type="button" onclick="window.location.href='#projects'">Projects</button></li>
+                </ul>
+            </nav>
+        </div>
+        <br>
+    </header>
+
+    <!-- Main -->
+    <main>
+        <!-- Introduction (Picture + Hero + Mission/Vision)-->
+        <div id="introduction">
+            <img id="hero-img" src="https://placehold.co/1200x1000" alt="An image of me">
+            <div id="intro-text">
+                <!-- Hero -->
+                <div id="hero">
+                    <p>I bring a wide range of skills to bear on solving any technical problems you may have. I have a strong background in tech support, programming, hardware, operating systems, and a wide range of technical tools.</p>
+                    <p id="linkedINLink">Check out <a href="https://www.linkedin.com/in/ashley-masters-1990aa277" target="_blank">My LinkedIN</a> to learn more about me</p>
+                    <hr id="intro-line">
+                </div>
+                <!-- Mission/Vision -->
+                <div id="mission-vision">
+                    <p>Tech designed for the people who use it</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Skills -->
+        <section id="skills" class="loose-text">
+            <h2 class="section-header">Skills</h2>
+            <br>
+            <ol id="skill-list">
+                <li>Python</li> <li>Java</li> <li>C</li> <li>SQL</li> <li>C++</li> <li>Powershell</li><li>HTML</li> <li>CSS</li> <li>PHP</li> <li>PowerAutomate</li> <li>Excel Scripts</li> <li>Testing and Debugging</li> <li>AGILE development</li> <li>Printer support</li> <li>A/V support</li> <li>OS setup</li> <li>Hardware support</li> <li>SSH</li> <li>Raspberry Pi</li> <li>Asset Management</li> <li>Git</li> <li>Project Planning</li>
+            </ol>
+            <br>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="loose-text">
+            <h2 class="section-header">Contact</h2>
+            <br>
+            <button class="contact-button"><a href="Ashley_Masters_Resume.pdf" target="_blank">My Resume</a></button>
+            <button class="contact-button"><a href="mailto:amasters002@gmail.com">amasters002@gmail.com</a></button>
+            <button class="contact-button"><a href='https://www.linkedin.com/in/ashley-masters-1990aa277' target="_blank">My LinkedIN</a></button>
+            <!-- onclick="window.open('https://www.linkedin.com/in/ashley-masters-1990aa277')" -->
+            <br> 
+        </section>
+
+        <!-- Projects -->
+        <section id="projects">
+            <h2 class="section-header">Projects</h2>
+            <div id="project-grid">
+                <div  class="project" id="pi-project"><p><!--img from iconduck.com--><a href="https://www.raspberrypi.com/" target="_blank"><img src="rasp_pi.webp" alt="Raspberry pi icon" width="30" height="30"></a> Assembling, installing OS on and testing dozens of raspberry PI computers for PI jam event</p></div>
+                <div class="project" id="pc-setup-project"><p>Picking parts for and assembling desktop computer, adding upgrades over the years</p></div>
+                <div class="project" id="thesis-ethics-project"><p>Setting up a system to facilitate ethics review of thesis proposals for the Dalhousie computer science department</p></div>
+            </div>
+            <!--TA Schedule Project-->
+            <!--A/V Troubleshooting Project-->
+            <!--OS USB Project-->
+            <!--Broken PC Troubleshooting (To be completed)-->
+            <!--Overengineered Alarm Project (To be completed)-->
+            <!--Home File server project (To be completed)-->
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="menu" id="footer-div">
+            <div class="menu-item">
+                <img class="sub-menu-item" src="https://placehold.co/47x47" alt="Logo image">
+                <p class="sub-menu-item" id="footer-contact"><a href="mailto:amasters002@gmail.com">amasters002@gmail.com</a><br><a href='https://www.linkedin.com/in/ashley-masters-1990aa277' target="_blank">My LinkedIN</a></p>
+            </div>
+            <nav class="menu-item">
+                <ul class="sub-menu-item menu-list">
+                    <li><button type="button" onclick="window.location.href='#hero'">Introduction</button></li>
+                    <li><button type="button" onclick="window.location.href='#skills'">Skills</button></li>
+                    <li><button type="button" onclick="window.location.href='#projects'">Projects</button></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>
